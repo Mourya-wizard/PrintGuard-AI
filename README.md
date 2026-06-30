@@ -18,6 +18,9 @@ Traditional cloud-based Vision-Language Models (VLMs) suffer from extreme latenc
 
 By leveraging **Google DeepMind's `gemma-4-31b-it`** running natively on the **Cerebras CS-3 Wafer-Scale Engine**, PrintGuard executes the exact same 5-agent multimodal reasoning pipeline in **0.38 seconds at over 2,240 tokens/second** (**~396× faster**). This wafer-scale speed unlocks true **real-time closed-loop robotic control**, enabling autonomous G-code dispatch (`M140`, `M104`, `M106`, `M112`) within milliseconds of defect inception.
 
+<img width="4608" height="2080" alt="IMG20260629202959" src="https://github.com/user-attachments/assets/8a8a4067-2fc6-4acb-a9ef-e2518514b2cb" />
+
+
 ---
 
 ## 🏆 Hackathon Alignment & Target Tracks
@@ -47,6 +50,27 @@ In fused deposition modeling (FDM) 3D printing, thermal dynamics dictate part qu
 Standard cloud AI pipelines introduce a 120–180 second round-trip latency when passing base64 images through multi-step agent frameworks. In 150 seconds, an Ender 3 printing at 60mm/s deposits **9 meters of extruded filament**. If a defect occurs at second 1, receiving a correction at second 150 results in a ruined print wrapped in hardened PLA. Real-time industrial control demands sub-second feedback loops.
 
 ---
+## 🎥 Demo Videos
+
+### 🎬 Original Hackathon Submission Demo
+ https://drive.google.com/file/d/1jnMrNf1rD4N25uEQFNzbpEA_GaQ8OIoa/view?usp=sharing
+
+### 🎛️ Dashboard Demo
+
+#### **Note:**
+Due to the 24-hour hackathon time constraints, along with the hardware integration and synchronization challenges between the 3D printer, thermal camera, and the final dashboard, I was unable to record and edit a demonstration of the completed system. 
+
+This video is an earlier demo captured during the system testing phase using simulated process data with induced defects to validate the robustness of the multi-agent system.
+
+The speed comparison was performed later by running the **same five-agent pipeline** with **Gemma 4** on the **Cerebras CS-3** and comparing it against **Gemma 4 running on Google hardware accessed via the Gemini API**.
+
+https://github.com/user-attachments/assets/e003f7ac-eec0-41f2-865d-056ca9207b67
+
+
+
+
+
+
 
 ## 🧠 System Architecture & The 5-Agent Multiverse
 
